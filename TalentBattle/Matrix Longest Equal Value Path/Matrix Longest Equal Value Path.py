@@ -7,8 +7,9 @@ def consecutivePath(matrix):
     n = len(matrix[0])
     for i in range(m):
         for j in range(n):
-            if(check(matrix, i, j) == 1):
-                arr.append(matrix[i][j])
+            if(matrix[i][j] not in arr):
+                if(check(matrix, i, j) == 1):
+                    arr.append(matrix[i][j])
     if(arr == []):
         print(-1)
     else:
